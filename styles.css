@@ -4,6 +4,7 @@
     --primary-color: white;
     --secondary-color: rgb(131, 30, 226);
     --accent-color: rgb(56, 176, 227);
+    --text-color:  rgb(107, 105, 105);
 
 }
 
@@ -17,7 +18,7 @@ html {
 }
 
 p {
-    color: rgb(95, 94, 94);
+    color: var(--text-color);
 }
 
 .wrapper {
@@ -56,28 +57,38 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 80px;
+    padding: 20px;
     gap: 50px;
     overflow: hidden;
 }
 
-footer p {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 40px;
-    
+
+footer {
+    margin-top: 50px;
+    p {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 50px;
+    }
+
+    hr {
+        border: 1px solid rgb(184, 181, 181);
+        margin-left: 70px;
+        margin-right: 70px;
+    }
 }
+
 
 .approach {
     display: block;
     box-sizing: border-box;
-    max-width: 450px;
-    min-width: 350px;
+    max-width: 415px;
+    min-width: 300px;
     min-height: 400px;
     list-style-position: inside;
-    padding: 30px;
-    padding-top: 20px;
+    padding: 40px;
+    padding-top: 30px;
     border: 1px solid rgb(184, 181, 181);
     border-radius: 15px;
 
@@ -85,7 +96,7 @@ footer p {
     flex-direction: column;
     justify-content: stretch;
     
-    gap: 20px;
+    gap: 25px;
    
 }
 
@@ -94,6 +105,7 @@ footer p {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    color: var(--text-color);
   
 }
 
@@ -135,8 +147,8 @@ footer p {
     border: none;
     color: var(--primary-color);
     border-radius: 20px;
-    height: 30px;
-    width: 100px;
+    height: 40px;
+    width: 110px;
     background-color: red;
     font-weight: 450;
     font-size: small; 
