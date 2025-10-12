@@ -16,6 +16,10 @@ html {
     font-family: Zalando Sans, sans-serif, helvetica;
 }
 
+p {
+    color: rgb(95, 94, 94);
+}
+
 .wrapper {
     background: linear-gradient(to bottom right, var(--secondary-color), var(--accent-color));
     padding: 30px 50px;
@@ -23,29 +27,59 @@ html {
     
 }
 
-.content-box {
-  
-    background-color: var(--primary-color);
-    border-radius: 18px;
-    padding: 30px;
+header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 55px;
+    margin-top: 30px;
+    gap: 50px;
+    padding: 20px;
+    h1 {
+        font-size: 3rem;
+    }
+    p {
+        font-size: 1.3rem;
+    }
+    
+}
 
+.content-box {
+    
+    background-color: var(--primary-color);
+    border-radius: 18px;
     overflow-y: auto;
+    overflow-x: auto;
 
 }
 
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 80px;
+    gap: 50px;
+    overflow: hidden;
+}
+
+footer p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px;
+    
+}
 
 .approach {
     display: block;
     box-sizing: border-box;
-    max-width: 400px;
-    height: 400px;
+    max-width: 450px;
+    min-width: 350px;
+    min-height: 400px;
     list-style-position: inside;
-    padding: 2rem;
-    border: 1px solid black;
+    padding: 30px;
+    padding-top: 20px;
+    border: 1px solid rgb(184, 181, 181);
+    border-radius: 15px;
 
     display: flex;
     flex-direction: column;
@@ -57,7 +91,6 @@ html {
 
 .approach ul {
     list-style: none;
-    /* margin-bottom: 60px; */
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -79,3 +112,51 @@ html {
 .approach p {
     line-height: 1.4;
 }
+
+.approach a {
+    color: var(--accent-color);
+    font-weight: 600;
+    text-decoration: none;
+    width: 110px;
+    height: 20px;
+    border-radius: 20px;
+    transition: 150ms ease;
+}
+
+.approach a:hover {
+    background-color: #f4f4f4;
+    padding: 4px;
+    border-radius: 5px;
+    
+}
+
+.approach span {
+    margin-top: 5px;
+    border: none;
+    color: var(--primary-color);
+    border-radius: 20px;
+    height: 30px;
+    width: 100px;
+    background-color: red;
+    font-weight: 450;
+    font-size: small; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 150ms ease;
+}
+
+#prototype span {
+    background-color: grey;
+    
+}
+
+#prototype span:hover {
+    background-color: rgb(28, 24, 24);
+}
+
+.approach span:hover {
+    background-color: rgb(148, 22, 22);
+
+}
+
