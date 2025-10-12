@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root {
+    --primary-color: white;
+    --secondary-color: rgb(131, 30, 226);
+    --accent-color: rgb(56, 176, 227);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: Zalando Sans, sans-serif, helvetica;
+}
+
+.wrapper {
+    background: linear-gradient(to bottom right, var(--secondary-color), var(--accent-color));
+    padding: 30px 50px;
+    
+    
+}
+
+.content-box {
+  
+    background-color: var(--primary-color);
+    border-radius: 18px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 55px;
+
+    overflow-y: auto;
+
+}
+
+
+.approach {
+    display: block;
+    box-sizing: border-box;
+    max-width: 400px;
+    height: 400px;
+    list-style-position: inside;
+    padding: 2rem;
+    border: 1px solid black;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    
+    gap: 20px;
+   
+}
+
+.approach ul {
+    list-style: none;
+    /* margin-bottom: 60px; */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  
+}
+
+.approach li::before {
+    content: '✓';
+    color: rgb(25, 222, 14);
+    font-weight: 800;
+    margin-right: 8px;
+}
+
+.approach h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.approach p {
+    line-height: 1.4;
+}
