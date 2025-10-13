@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root {
+    --primary-color: white;
+    --secondary-color: rgb(131, 30, 226);
+    --accent-color: rgb(56, 176, 227);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: Zalando Sans, sans-serif, helvetica;
+  
+   
+}
+
+
+
+#wrapper {
+    background: linear-gradient(to bottom right, var(--secondary-color), var(--accent-color));
+    padding: 50px 50px;
+    min-height: 85vh;
+
+
+   
+
+   
+}
+
+
+
+.content-box {
+    max-width: 700px;
+    width: 100%;
+    height: 85vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    
+    
+    
+
+    border: 4px solid black;
+    
+    background-color: var(--primary-color);
+    
+  
+    
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid black;
+    
+}
+
+main {
+   
+    border: 3px solid black;
+   
+}
+
+footer {
+    padding: 1rem;
+    border-top: 1px solid #ddd;
+   
+    form {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        input {
+            display: flex;
+            width: 70%;
+            height: 50px;
+            border-radius: 15px;
+            margin-right: 15px;
+
+        }
+        button {
+            margin-top: 8px;
+            border-radius: 20px;
+            height: 40px;
+            width: 70px;
+            color: var(--primary-color);
+            background-color: gray;
+            font-weight: 450;
+            font-size: small; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 150ms ease;
+        }
+    }
+    p {
+   
+
+        font-size: small;
+        border: 1px solid rgb(255, 191, 0);
+        background-color: rgba(240, 201, 8, 0.425);
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+#chat-box {
+    height: 40vh;
+    overflow-y: auto;
+   
+}
+
+.bot {
+    display: flex;
+    justify-content: start;
+    border: 4px solid gray;
+}
+
+.user {
+    display: flex;
+    justify-content: end;
+    border: 4px solid blue;
+}
+
+
