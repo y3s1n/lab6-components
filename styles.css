@@ -149,23 +149,23 @@ footer {
     border: none;
     color: var(--primary-color);
     border-radius: 20px;
-    height: 40px;
-    width: 110px;
+    height: 35px;
+    width: 130px;
     background-color: red;
-    font-weight: 450;
-    font-size: small; 
+    font-weight: 600;
+    font-size: medium; 
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 150ms ease;
 }
 
-#prototype span {
+#prototype {
     background-color: grey;
     
 }
 
-#prototype span:hover {
+#prototype:hover {
     background-color: rgb(28, 24, 24);
 }
 
