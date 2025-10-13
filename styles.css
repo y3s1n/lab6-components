@@ -28,6 +28,15 @@ p {
     
 }
 
+.content-box {
+    
+    background-color: var(--primary-color);
+    border-radius: 18px;
+    overflow-y: auto;
+    overflow-x: auto;
+
+}
+
 header {
     display: flex;
     flex-direction: column;
@@ -44,14 +53,7 @@ header {
     
 }
 
-.content-box {
-    
-    background-color: var(--primary-color);
-    border-radius: 18px;
-    overflow-y: auto;
-    overflow-x: auto;
 
-}
 
 main {
     display: flex;
