@@ -52,6 +52,7 @@ html {
 
 header {
     height: 20%;
+    gap: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,21 +65,22 @@ header {
 main {
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
-    height: 50%;
+    height: 55%;
+    overflow-y: auto;
    
 }
 
 footer {
     
 
-    height: 30%; 
+    height: 25%; 
    
 }
 
 
 form {
     display: block;
-    height: 100px;
+    height: 85px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -89,7 +91,7 @@ form {
 form input {
     display: flex;
     width: 75%;
-    height: 57px;
+    height: 50px;
     border: 1px solid var(--border-color) ;
     border-radius: 25px;
     margin-right: 15px;
@@ -111,7 +113,7 @@ form input:focus {
 
 form button {
     border-radius: 30px;
-    height: 57px;
+    height: 50px;
     width: 100px;
     min-width: 60px;
     color: var(--primary-color);
@@ -131,7 +133,7 @@ form button {
     border-top: 1px solid rgba(255, 191, 0, 0.654);
     background-color: rgba(255, 231, 16, 0.366);
     width: 100%;
-    height: 80px;
+    height: 70px;
     display: flex;
     align-items: center;
     text-align: center;
@@ -144,11 +146,7 @@ form button {
 
 }
 
-#chat-box {
-    
-    overflow-y: auto;
-   
-}
+
 
 .bot {
     display: flex;
