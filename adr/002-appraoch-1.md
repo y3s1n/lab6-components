@@ -31,3 +31,35 @@
 
 __Key Learning__: How to manipulate the DOM, handle events, and manage state with vanilla JavaScript
 
+## Implementation Problems & adjustments
+
+_When I submit the text it appears for a split second then dissapears_:
+
+- Because the button type was not specified it defaults to "submit" this causes the page to reload, every time the page relods the messages dissapear
+
+ __Solution__: explicitly set the type to button rather than submit
+
+_The Enter button clears the text field but doesnt submit the message_:
+
+- The Enter button has an event type of submit and submit naturally refreshes the page which deletes the messages
+
+__Solution__: Create an event listener for the form that looks for the event type of "submit" call a function and pass the event "e" then use `e.preventDefault()` to prevent its default action of refershing the page then call `send()`
+
+_When a message gets too long it extends to the left, make it so that it translates vertically rather than horizontally_:
+
+- Because the input was previously defined as type="text" the text box wouldnt break or wrap and would remain on a single line, need to use `<textarea>`. Text areas enter event action creates a new line rather than refreshing so that needed refactoring aswell
+
+__Solution__: 
+
+- Replaced input tag with textarea tag to get text box functionality
+- Inherited font because text area doesnt by default
+- Used box-sizing: border-box with top padding to align text vertically (Cannot use flex box since textarea is not flex child)
+- Changed eventlistner from chat form to text area specifically
+    - Changed event from submit to keydown
+    - if statement to see if enter key is pressed without shift key = send message else = newline
+
+
+
+
+
+
