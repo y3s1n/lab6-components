@@ -37,6 +37,9 @@ function addToChatWindow(text, speaker) {
     theSpeaker.appendChild(theMessage);
     chatWindow.appendChild(theSpeaker);
 
+    const tWindow = document.getElementById('main')
+    tWindow.scrollTop = tWindow.scrollHeight;
+
 
 
 }
@@ -48,13 +51,14 @@ function send() {
 
     let chatBox = document.getElementById('chatBox');
     messageBox.value = '';
-    messageBox.focus;
+    messageBox.focus();
 
     addToChatWindow(text, 'user');
     
     processMessage(text);
 
 }
+
 
 
 function init() {
