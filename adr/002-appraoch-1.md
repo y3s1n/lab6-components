@@ -59,6 +59,11 @@ __Solution__:
     - if statement to see if enter key is pressed without shift key = send message else = newline
 
 
+_improting eliza breaks my eventlisteners_:
+
+__Solution__: I was attempting to import eliza from the same directory but it was one directory over the current so doing `../eliza.js` fixed it
+
+
 
 
 
