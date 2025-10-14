@@ -23,6 +23,10 @@ function send() {
 function init() {
     console.log('In the init function');
     document.getElementById('sendBtn').addEventListener('click', function() { send();});
+    document.getElementById('chatForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        send();
+    });
 }
 
 window.addEventListener('DOMContentLoaded', init);
