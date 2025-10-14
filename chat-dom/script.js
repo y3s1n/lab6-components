@@ -1,3 +1,21 @@
+import { getBotResponse } from '../eliza.js';
+
+function showResponse(response) {
+    console.log('In the show function');
+    addToChatWindow(response, 'bot');
+}
+
+function getResponse(message) {
+    console.log('In the get function');
+    return getBotResponse(message);
+}
+
+ function processMessage(message) {
+    console.log('In the process function');
+    let response = getResponse(message);
+
+    showResponse(response);
+}
 
 
 function addToChatWindow(message, speaker) {
@@ -16,6 +34,8 @@ function send() {
     messageBox.focus;
 
     addToChatWindow(message, 'user');
+    
+    processMessage(message);
 
 }
 
