@@ -23,9 +23,11 @@ function send() {
 function init() {
     console.log('In the init function');
     document.getElementById('sendBtn').addEventListener('click', function() { send();});
-    document.getElementById('chatForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        send();
+    document.getElementById('messageBox').addEventListener('keydown', function(e) {
+        if(e.key === 'Enter' && !e.shiftKey){
+            e.preventDefault();
+            send();
+        }
     });
 }
 
