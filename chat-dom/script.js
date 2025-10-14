@@ -5,37 +5,54 @@ function showResponse(response) {
     addToChatWindow(response, 'bot');
 }
 
-function getResponse(message) {
+function getResponse(text) {
     console.log('In the get function');
-    return getBotResponse(message);
+    return getBotResponse(text);
 }
 
- function processMessage(message) {
+ function processMessage(text) {
     console.log('In the process function');
-    let response = getResponse(message);
+    let response = getResponse(text);
 
     showResponse(response);
 }
 
-
-function addToChatWindow(message, speaker) {
+/**
+ * 
+ * @param {*} text 
+ * @param {*} speaker 
+ */
+function addToChatWindow(text, speaker) {
     console.log('In the add to chat function');
-    let chatWindow = document.getElementById('chatBox');
-    chatWindow.innerHTML += `<div class="${speaker}"><p class="message">${message}</p></div>`;
+    const chatWindow = document.getElementById('chatBox');
+    
+
+    const theSpeaker = document.createElement('div');
+    theSpeaker.className = speaker;
+
+    const theMessage = document.createElement('p');
+    theMessage.className = 'message';
+    theMessage.textContent = text;
+
+    theSpeaker.appendChild(theMessage);
+    chatWindow.appendChild(theSpeaker);
+
+
+
 }
 
 function send() {
     console.log('In the send function');
     let messageBox = document.getElementById('messageBox');
-    let message = messageBox.value;
+    let text = messageBox.value;
 
     let chatBox = document.getElementById('chatBox');
     messageBox.value = '';
     messageBox.focus;
 
-    addToChatWindow(message, 'user');
+    addToChatWindow(text, 'user');
     
-    processMessage(message);
+    processMessage(text);
 
 }
 
