@@ -29,7 +29,7 @@ html {
 
 
 
-.content-box {
+.contentBox {
     max-width: 700px;
     width: 100%;
     min-height:  600px;
@@ -136,6 +136,9 @@ form button {
     --bubble-border: rgba(93, 114, 127, 0.103);
     --bubble-fg: black;
     margin-left: 20px;
+    margin-right: 15px;
+    margin-bottom: 5px;
+    margin-top: 5px;
     
     p {
         border-bottom-left-radius: 0;
@@ -153,6 +156,8 @@ form button {
     --bubble-border: rgba(56, 130, 227, 0.699);
     --bubble-fg: white;
     margin-right: 20px;
+    margin-left: 15px;
+    
    
 
      p {
@@ -171,8 +176,8 @@ form button {
     
     max-width: 34ch;
     word-wrap: break-word;
-    margin-bottom: 5px;
-    margin-top: 20px;
+    
+    margin-top: 5px;
 
 }
 

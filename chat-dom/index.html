@@ -7,24 +7,21 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <script type="module" src="script.js"></script>
     <div id="wrapper">
-        <div class="content-box">
+        <div class="contentBox">
             <header>
                 <h1>Chat Assistant</h1>
                 <p>Approach 1: chat using vanilla JavaScript and standard DOM methods</p>
 
             </header>
             <main>
-                <div id="chat-box">
-                   
-                    
-                </div>
+                <div id="chatBox"></div>
             </main>
             <footer>
                 <form>
-                    <input type="text" name="textbox" placeholder="Type a message...">
-                    <button>Send</button>
+                    <input type="text" name="textbox" id="messageBox" placeholder="Type a message...">
+                    <button id="sendBtn" type="button">Send</button>
                 </form>
 
             </footer>
