@@ -120,7 +120,7 @@ form button {
     width: 100px;
     min-width: 60px;
     color: var(--primary-color);
-    background-color: rgb(207, 202, 202);
+    background-color: var(--accent-color);
     border: 1px solid var(--border-color);
     font-weight: 550;
     font-size: large; 
@@ -129,8 +129,13 @@ form button {
     align-items: center;
     transition: 150ms ease;
     margin-right: 10px;
+    transition: 150ms ease;
 }
 
+form button:hover {
+    background-color: rgb(77, 107, 242);
+
+}
 
 
 
