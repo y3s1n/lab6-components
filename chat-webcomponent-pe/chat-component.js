@@ -15,7 +15,10 @@ class simpleChat extends HTMLElement {
         this.button.disabled = false;
 
 
+        this.setupEventListeners();
+    }
 
+    setupEventListeners() {
          this.button.addEventListener('click', ()  => { this.send();});
          this.textarea.addEventListener('keydown', (e) => {
             if(e.key === 'Enter' && !e.shiftKey){
@@ -26,6 +29,7 @@ class simpleChat extends HTMLElement {
 
     }
 
+    
     send() {
    
         const text = this.textarea.value;
