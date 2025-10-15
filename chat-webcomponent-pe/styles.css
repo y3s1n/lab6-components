@@ -30,8 +30,9 @@ html {
 
 
 .content-box {
+    box-sizing: border-box;
     max-width: 700px;
-    width: 100%;
+    min-width: 300px;
     min-height:  600px;
     height: 91vh;
    

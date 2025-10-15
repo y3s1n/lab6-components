@@ -11,6 +11,9 @@ class simpleChat extends HTMLElement {
         this.button = this.querySelector('#sendBtn');
         this.chatBox = this.querySelector('.chatBox');
 
+        this.textarea.disabled = false;
+        this.button.disabled = false;
+
 
 
          this.button.addEventListener('click', ()  => { this.send();});
