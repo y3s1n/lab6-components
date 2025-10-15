@@ -1,3 +1,5 @@
+import { getBotResponse } from '../eliza.js';
+
 class simpleChat extends HTMLElement {
     constructor() {
         super();
@@ -33,22 +35,35 @@ class simpleChat extends HTMLElement {
 
     }
 
-        addToChatWindow(text, speaker) {
+    addToChatWindow(text, speaker) {
+    
+        const theSpeaker = document.createElement('div');
+        theSpeaker.className = speaker;
+
+        const theMessage = document.createElement('p');
+        theMessage.className = 'message';
+        theMessage.textContent = text;
+
+        theSpeaker.appendChild(theMessage);
+        this.chatBox.appendChild(theSpeaker);
+
+        this.chatBox.scrollTop = this.chatBox.scrollHeight;
+
+    }
+
+    showResponse(response) {
         
-            const theSpeaker = document.createElement('div');
-            theSpeaker.className = speaker;
-
-            const theMessage = document.createElement('p');
-            theMessage.className = 'message';
-            theMessage.textContent = text;
-
-            theSpeaker.appendChild(theMessage);
-            this.chatBox.appendChild(theSpeaker);
-
-            this.chatBox.scrollTop = this.chatBox.scrollHeight;
-
-
-
+        this.addToChatWindow(response, 'bot');
+    }
+    
+    getResponse(text) {
+        return getBotResponse(text);
+    }
+    
+    processMessage(text) {
+        let response = this.getResponse(text);
+    
+        this.showResponse(response);
     }
 }
 
