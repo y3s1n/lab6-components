@@ -194,7 +194,13 @@ form button:hover {
 #messageBox {
     scrollbar-width: thin;
     scrollbar-color: var(--border-color) transparent;
+    
 
+}
+
+
+#messageBox::-webkit-scrollbar-button {
+  display: none;
 }
 
 
