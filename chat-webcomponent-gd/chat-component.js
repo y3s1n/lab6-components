@@ -291,17 +291,32 @@ class chatInterface extends HTMLElement {
      * @param {String} text user message from textarea
      * @returns {string} bot response from eliza
      */
-    getResponse(text) {
-        return getBotResponse(text);
+    // getResponse(text) {
+    //     return getBotResponse(text);
+    // }
+
+    async getResponse(text) {
+        const res = await fetch("https://little-frog-30ef.yesinq77.workers.dev/api/chat", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({ text })
+        });
+        const data = await res.json();
+        return data.text || "(no reply)";
     }
     
+
     /**
      * Takes user message and sends it to the getResponsefunction 
      * @param {string} text user message from textarea
      */
-    processMessage(text) {
-        let response = this.getResponse(text);
+    // processMessage(text) {
+    //     let response = this.getResponse(text);
     
+    //     this.showResponse(response);
+    // }
+    async processMessage(text) {
+        const response = await this.getResponse(text);
         this.showResponse(response);
     }
 }
