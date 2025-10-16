@@ -62,9 +62,9 @@ __Key Learning__: Full encapsulation with Shadow DOM. The component is completel
 
 ## API Integration
 
-Set up an account with Cloudflare and used their free LLM (Workers AI) that allows 200,000 requests a day. To avoid security complications and running server code, I implemented a seperate backend that runs securly on the CloudFare servers through the URL that was provided when I setup the account, my github site calls on this site through fetch.
 
-I defined a post endpoint that sends the text and returns the assitants reply everything else will return a 404 not found error
+
+
 
 ## Problems and solutions
 
