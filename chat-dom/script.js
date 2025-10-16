@@ -5,7 +5,6 @@ import { getBotResponse } from '../eliza.js';
  * @param {String} response bot response from eliza
  */
 function showResponse(response) {
-    console.log('In the show function');
     addToChatWindow(response, 'bot');
 }
 
@@ -16,7 +15,6 @@ function showResponse(response) {
  * @returns {string} bot response from eliza
  */
 function getResponse(text) {
-    console.log('In the get function');
     return getBotResponse(text);
 }
 
@@ -25,7 +23,6 @@ function getResponse(text) {
  * @param {string} text user message from textarea
  */
  function processMessage(text) {
-    console.log('In the process function');
     let response = getResponse(text);
 
     showResponse(response);
@@ -38,7 +35,6 @@ function getResponse(text) {
  * @param {String} speaker either bot or user
  */
 function addToChatWindow(text, speaker) {
-    console.log('In the add to chat function');
     const chatWindow = document.getElementById('chatBox');
     
 
@@ -65,7 +61,6 @@ function addToChatWindow(text, speaker) {
  * Then it calls on the processMessage function to get a response from eliza
  */
 function send() {
-    console.log('In the send function');
     let messageBox = document.getElementById('messageBox');
     let text = messageBox.value;
 
@@ -85,7 +80,6 @@ function send() {
  * a message before calling on the send function
  */
 function init() {
-    console.log('In the init function');
     document.getElementById('sendBtn').addEventListener('click', function() { send();});
     document.getElementById('messageBox').addEventListener('keydown', function(e) {
         if(e.key === 'Enter' && !e.shiftKey){
