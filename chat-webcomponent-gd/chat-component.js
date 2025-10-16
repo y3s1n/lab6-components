@@ -1,4 +1,3 @@
-import { getBotResponse } from '../eliza.js';
 
 class chatInterface extends HTMLElement {
     constructor() {
@@ -285,15 +284,7 @@ class chatInterface extends HTMLElement {
         this.addToChatWindow(response, 'bot');
     }
     
-    /**
-     * gets user message from processMessage function and sends it to pattern recognition function in eliza
-     * "getBotResponse"
-     * @param {String} text user message from textarea
-     * @returns {string} bot response from eliza
-     */
-    // getResponse(text) {
-    //     return getBotResponse(text);
-    // }
+
 
     async getResponse(text) {
         const res = await fetch("https://little-frog-30ef.yesinq77.workers.dev/api/chat", {
@@ -306,15 +297,6 @@ class chatInterface extends HTMLElement {
     }
     
 
-    /**
-     * Takes user message and sends it to the getResponsefunction 
-     * @param {string} text user message from textarea
-     */
-    // processMessage(text) {
-    //     let response = this.getResponse(text);
-    
-    //     this.showResponse(response);
-    // }
     async processMessage(text) {
         const response = await this.getResponse(text);
         this.showResponse(response);
