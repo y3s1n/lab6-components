@@ -86,7 +86,7 @@ form {
     justify-content: center;
     align-items: center;
     padding-left: 10px;
-    
+   
 }
 
 form textarea {
@@ -100,6 +100,7 @@ form textarea {
     border: 1px solid var(--border-color) ;
     border-radius: 30px;
     margin-right: 15px;
+    
   
 
     font-size: 1.2em;
@@ -153,14 +154,10 @@ form button:hover {
     margin-bottom: 5px;
     margin-top: 5px;
     
-    p {
-        border-bottom-left-radius: 0;
-    }
 
-    
-    
-    
 }
+
+.bot .message {border-bottom-left-radius: 0;}
 
 .user {
     display: flex;
@@ -171,13 +168,11 @@ form button:hover {
     margin-right: 20px;
     margin-left: 15px;
     
-   
 
-     p {
-        border-bottom-right-radius: 0;
-    }
     
 }
+
+.user .message {border-bottom-right-radius: 0;}
 
 .message {
     display: inline-block;
@@ -195,4 +190,20 @@ form button:hover {
     margin-bottom: 5px;
 
 }
+
+#messageBox {
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-color) transparent;
+
+}
+
+
+
+
+
+
+
+
+
+
 
