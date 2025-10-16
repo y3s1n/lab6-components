@@ -16,8 +16,6 @@ class chatInterface extends HTMLElement {
                     --secondary-color: rgb(131, 30, 226);
                     --accent-color: rgb(56, 130, 227);
                     --border-color: rgb(184, 182, 182);
-                    
-                    
                 
                 }
 
@@ -184,6 +182,10 @@ class chatInterface extends HTMLElement {
 
                 }
 
+                #messageBox {
+                    
+                }
+
             </style>
 
             <div id="wrapper">
@@ -277,7 +279,7 @@ class chatInterface extends HTMLElement {
 
     /**
      *  Sends bot response to addToChatWindow with the bot as the speaker
-     * @param {String} response bot response from eliza
+     * @param {String} response bot response from AI
      */
     showResponse(response) {
         
@@ -286,6 +288,11 @@ class chatInterface extends HTMLElement {
     
 
 
+    /**
+     * Sends a message to the Cloudflare Workers AI backend and returns the assistant's reply.
+     * @param {string} text - The user's message to send to the backend.
+     * @returns {Promise<string>} The assistant's reply text.
+     */
     async getResponse(text) {
         const res = await fetch("https://little-frog-30ef.yesinq77.workers.dev/api/chat", {
             method: "POST",
@@ -295,8 +302,12 @@ class chatInterface extends HTMLElement {
         const data = await res.json();
         return data.text || "(no reply)";
     }
-    
 
+    /**
+     * Processes a user message by sending it to the backend and displaying the response.
+     * @param {string} text - The user's message to process.
+     * @returns {Promise<void>} Resolves when the response is displayed.
+     */
     async processMessage(text) {
         const response = await this.getResponse(text);
         this.showResponse(response);
