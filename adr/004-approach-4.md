@@ -60,11 +60,6 @@ customElements.define('chat-interface', ChatInterface);
 
 __Key Learning__: Full encapsulation with Shadow DOM. The component is completely self-contained and portable.
 
-## API Integration
-
-
-
-
 
 ## Problems and solutions
 
